@@ -22,11 +22,15 @@ namespace HMUNOZS3
            string datoUno = txtDato.Text;
             string datoDos = txtDatoDos.Text;
 
-            Navigation.PushAsync(new Registro(datoUno,  datoDos));
+            if (txtDato.Text == "estudiante2023" && txtDatoDos.Text == "uisrael2023")
+                Navigation.PushAsync(new Registro(datoUno, datoDos));
+            else
+                DisplayAlert("ALerta", "Clave / contraseña Incorrecta ", "Cancelar");
         }
-
+    
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
+            
 
         }
     }

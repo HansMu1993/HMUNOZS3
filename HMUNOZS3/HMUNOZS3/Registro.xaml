@@ -3,10 +3,233 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HMUNOZS3.Registro">
     <ContentPage.Content>
+
         <StackLayout>
-            <Label Text="Registro" FontSize="24" HorizontalTextAlignment="Center" />
-            <Label x:Name ="lblDatoUno"    FontSize="20"  />
-            <Entry x:Name="txtDatoDos" Placeholder="Ingrese un Dato" />
+            <Label x:Name="lblUsuario" Text=""
+                FontSize="10" 
+                HorizontalOptions="Center" />
+
+            <Grid Padding="10,0" RowSpacing="1" ColumnSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+
+
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <!--ENCABEZADO-->
+                <BoxView Grid.Row="0"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                <Label Grid.Row="0"
+                       Grid.ColumnSpan="3"
+                       Text="Sistema  Calificaciones"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--PRIMER PARCIAL-->
+                <BoxView Grid.Row="1"
+                         Grid.ColumnSpan="3"
+                         Color="Azure" />
+
+                <Label Grid.Row="1"
+                       Grid.ColumnSpan="3"
+                       Text="Parcial I"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--NOTA EUMIENTO 1-->
+                <Label Text="Nota Seguimiento 1"
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure" />
+                <!--TXTSEGUMIENTO-->
+                <Entry  x:Name="txtSeg1" 
+                        Keyboard="Telephone" 
+                        Placeholder="Ingrese nota Seguimiento 1" 
+                        Grid.Row="2"  
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true" 
+                        VerticalTextAlignment="Center"  
+                        FontSize="Small" 
+                        BackgroundColor="Azure"/>
+                <!--DETALLE EXAMEN 1-->
+                <Label Text="Nota Examen 1 "
+                       Grid.Row="3" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure" />
+                <!--NOTA EXMAEN 1-->
+                <Entry  x:Name="txtExam1"
+                        Keyboard="Telephone" 
+                        Placeholder="Ingrese nota Examen 1" 
+                        Grid.Row="3" 
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true"
+                        VerticalTextAlignment="Center" 
+                        FontSize="Small"
+                        BackgroundColor="Azure"/>
+                <!--ENCABEZADO RESPUESTA-->
+                <Label Text="Nota Parcial Uno" 
+                       Grid.Row="4" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure" />
+                <!--VALRO NOTA PRIMER PARCIAL-->
+                <Label x:Name="txtRespuesta1" 
+                       Text=":" 
+                       Grid.Row="4" 
+                       Grid.Column="1" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure" />
+                <!--SEPARADOR-->
+                <BoxView Grid.Row="5"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--BOTON DE CALCULO PRIMER PARCIAL-->
+                <Button Grid.Row="5"   
+                        Grid.ColumnSpan="3"
+                        x:Name="btnCalcularParcial1" 
+                        Text="Calcular Parcial 1"
+                        Clicked="btnCalcular_Clicked"
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+
+                <!--SEGUNDO PARCIAL-->
+                <BoxView Grid.Row="6"
+                         Grid.ColumnSpan="3"
+                         Color="Azure" />
+                <!--ENCABEZADO PARCIAL DOS-->
+                <Label Grid.Row="6"
+                       Grid.ColumnSpan="3"
+                       Text="Parcial 2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--ENCABEZADO NOTA 2-->
+                <Label Text="Nota Seguimiento 2"
+                       Grid.Row="7" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1" 
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure" />
+                <!--VALOR NOTA 2-->
+                <Entry  x:Name="txtSeg2" 
+                        Keyboard="Telephone" 
+                        Placeholder="Ingrese nota Seguimiento 2" 
+                        Grid.Row="7"  
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true" 
+                        VerticalTextAlignment="Center"  
+                        FontSize="Small" 
+                        BackgroundColor="Azure"/>
+                <!--ENCABEZADO EXAMEN DOS-->
+                <Label Text="Nota Examen 2 " 
+                       Grid.Row="8" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1"
+                       Margin="2" 
+                       VerticalTextAlignment="Center" 
+                       BackgroundColor="Azure" />
+                <!--VALOR EXMANE DOS-->
+                <Entry  x:Name="txtExam2"
+                        Keyboard="Telephone"
+                        Placeholder="Ingrese nota Examen 2"
+                        Grid.Row="8" 
+                        Grid.ColumnSpan="1" 
+                        Grid.Column="2" 
+                        IsEnabled="true" 
+                        VerticalTextAlignment="Center" 
+                        FontSize="Small" 
+                        BackgroundColor="Azure"/>
+                <!--Encabezado nota paracial dos-->
+                <Label Text="Nota Parcial Dos" 
+                       Grid.Row="9" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="1"
+                       Margin="2" 
+                       VerticalTextAlignment="Center"
+                       BackgroundColor="Azure" />
+                <!--VALOR NOTA PARACIA DOS-->
+                <Label   x:Name="txtResultado2" Text=":"
+                         Grid.Row="9" 
+                         Grid.Column="1" 
+                         Grid.ColumnSpan="1" 
+                         Margin="2"
+                         VerticalTextAlignment="Center" 
+                         BackgroundColor="Azure" />
+                <!--SEPARADOR DE NOTA PARACIAL-->
+                <BoxView Grid.Row="10"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--BOTON DE NOTA PARCIAL DOS-->
+                <Button Grid.Row="10"   
+                        Grid.ColumnSpan="3" 
+                        x:Name="btnCalcularParcial2"
+                        Text="Calcular Parcial 2"
+                        HorizontalOptions="Center" 
+                        Clicked="btnCalcularParcial2_Clicked"
+                       VerticalOptions="Center" />
+
+                <!--SEPARADOR ESTADO-->
+                <BoxView Grid.Row="11"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--VALOR ESTADO-->
+                <Label Grid.Row="11"
+                       Grid.ColumnSpan="3"
+                       Text="Estado :"
+                         x:Name="txtEstado"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--SEPARADOR NOTA FINAL-->
+                <BoxView Grid.Row="12"
+                         Grid.ColumnSpan="3" 
+                         Color="Azure" 
+                        HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <!--VALOR NOTA FINAL-->
+                <Label Grid.Row="12"
+                       Grid.ColumnSpan="3"
+                       Text="NOTA FINAL :"
+                         x:Name="txtNotaFinal"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </Grid>
 
         </StackLayout>
     </ContentPage.Content>
