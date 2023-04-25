@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMUNOZS3.Inicio">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Inicio" FontSize="20" HorizontalTextAlignment="Center" />
+            <Image Source="https://jorzgz0iptpc.cdn.shift8web.com/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
+            <Image Source="Ecuador.svg" WidthRequest="100" HeightRequest="100" />
+            <Entry x:Name="txtDato" Placeholder="Ingrese un Dato" />
+            <Entry x:Name="txtDatoDos" Placeholder="Ingrese un DatoDos" />
+            <Button x:Name="btnAbrir" Text="Abrir Ventana Dos"  Clicked="btnAbrir_Clicked" />
+            <ImageButton Source="Ecuador.png" Clicked="ImageButton_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

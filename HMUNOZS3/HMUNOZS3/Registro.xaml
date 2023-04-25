@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMUNOZS3.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro" FontSize="24" HorizontalTextAlignment="Center" />
+            <Label x:Name ="lblDatoUno"    FontSize="20"  />
+            <Entry x:Name="txtDatoDos" Placeholder="Ingrese un Dato" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
